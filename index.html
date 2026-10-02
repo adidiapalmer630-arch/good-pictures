@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AutoHub Motors | Premium Car Retail</title>
+    <meta
+      name="description"
+      content="AutoHub Motors is a premium car retail shop website showcasing new and used vehicles, financing options, test drives, and dealership services."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav-bar">
+        <a href="#home" class="brand" aria-label="AutoHub Motors home">
+          <span class="brand-mark">A</span>
+          <span>AutoHub Motors</span>
+        </a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#inventory">Cars</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#financing">Financing</a>
+          <a href="#contact">Contact</a>
+          <a href="#admin">Admin</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-secondary">Book a call</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <div class="subhead">Premium vehicles • Trusted dealership</div>
+            <h1>Find Your Perfect Car</h1>
+            <p>
+              Discover dependable vehicles, flexible finance options, and a smooth buying experience designed for modern drivers across Kenya.
+            </p>
+            <div class="hero-actions">
+              <a href="#inventory" class="btn btn-primary">Browse stock</a>
+              <a href="#contact" class="btn btn-ghost">Contact sales</a>
+            </div>
+
+            <div class="stats-row" aria-label="Dealership stats">
+              <div class="stat">
+                <strong>350+</strong>
+                <span>Cars sold</span>
+              </div>
+              <div class="stat">
+                <strong>15+</strong>
+                <span>Years experience</span>
+              </div>
+              <div class="stat">
+                <strong>1200+</strong>
+                <span>Happy clients</span>
+              </div>
+              <div class="stat">
+                <strong>4.9/5</strong>
+                <span>Customer rating</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-card" aria-label="Search form">
+            <form id="heroSearch" class="search-panel">
+              <div class="search-grid">
+                <div class="field">
+                  <label for="makeFilter">Make</label>
+                  <select id="makeFilter" name="make">
+                    <option value="">Any make</option>
+                    <option value="Toyota">Toyota</option>
+                    <option value="Mazda">Mazda</option>
+                    <option value="Nissan">Nissan</option>
+                    <option value="Mercedes-Benz">Mercedes-Benz</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Honda">Honda</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="modelFilter">Model</label>
+                  <select id="modelFilter" name="model">
+                    <option value="">Any model</option>
+                    <option value="Harrier">Harrier</option>
+                    <option value="CX-5">CX-5</option>
+                    <option value="Prado">Prado</option>
+                    <option value="X5">X5</option>
+                    <option value="C-Class">C-Class</option>
+                    <option value="Civic">Civic</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="minPrice">Min price</label>
+                  <input id="minPrice" type="number" value="" placeholder="e.g. 2000000" />
+                </div>
+                <div class="field">
+                  <label for="maxPrice">Max price</label>
+                  <input id="maxPrice" type="number" value="" placeholder="e.g. 10000000" />
+                </div>
+                <div class="field">
+                  <label for="yearFilter">Year</label>
+                  <select id="yearFilter" name="year">
+                    <option value="">Any year</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="transmissionFilter">Transmission</label>
+                  <select id="transmissionFilter" name="transmission">
+                    <option value="">Any</option>
+                    <option value="Automatic">Automatic</option>
+                    <option value="Manual">Manual</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Search cars</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="featured">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Featured vehicles</span>
+            <h2>Handpicked cars for every lifestyle</h2>
+          </div>
+          <div class="featured-grid" id="featuredGrid"></div>
+        </div>
+      </section>
+
+      <section class="section" id="services">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Our services</span>
+            <h2>Everything you need to drive away with confidence</h2>
+          </div>
+          <div class="service-grid">
+            <article class="service-card">
+              <div class="service-icon">🚙</div>
+              <h3>Vehicle Sales</h3>
+              <p>New and certified used cars selected for quality, safety, and value across multiple body types.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">🔎</div>
+              <h3>Vehicle Sourcing</h3>
+              <p>Need a vehicle not currently listed? We can source the exact make, model, and trim you want.</p>
+            </article>
+            <article class="service-card">
+              <div class="service-icon">💳</div>
+              <h3>Vehicle Financing</h3>
+              <p>Flexible loan guidance, deposit support, and financing partner referrals for stress-free purchases.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="testimonials">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Testimonials</span>
+            <h2>Customers trust AutoHub Motors</h2>
+          </div>
+          <div class="testimonials-grid">
+            <article class="testimonial">
+              <p>“The buying process was smooth, transparent, and fast. The team helped me choose the perfect family SUV.”</p>
+              <div class="person">
+                <div class="avatar">MK</div>
+                <div>
+                  <strong>Mary K.</strong><br />
+                  <span class="muted-text">Toyota Prado owner</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial">
+              <p>“I appreciated the financing clarity and the honest vehicle condition report before I signed anything.”</p>
+              <div class="person">
+                <div class="avatar">JN</div>
+                <div>
+                  <strong>John N.</strong><br />
+                  <span class="muted-text">Mazda CX-5 buyer</span>
+                </div>
+              </div>
+            </article>
+            <article class="testimonial">
+              <p>“From inquiries to delivery, every step felt professional. I’d recommend them to anyone buying a car.”</p>
+              <div class="person">
+                <div class="avatar">AS</div>
+                <div>
+                  <strong>Alice S.</strong><br />
+                  <span class="muted-text">Mercedes-Benz client</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="inventory">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Vehicle inventory</span>
+            <h2>Browse available cars</h2>
+          </div>
+
+          <div class="inventory-shell">
+            <div class="inventory-toolbar">
+              <h3>Search and filter</h3>
+              <button class="btn btn-secondary" type="button" id="resetFilters">Reset filters</button>
+            </div>
+
+            <div class="filter-wrap" id="inventoryFilters">
+              <div class="field">
+                <label for="filterMake">Make</label>
+                <select id="filterMake">
+                  <option value="">Any make</option>
+                  <option value="Toyota">Toyota</option>
+                  <option value="Mazda">Mazda</option>
+                  <option value="Nissan">Nissan</option>
+                  <option value="Mercedes-Benz">Mercedes-Benz</option>
+                  <option value="BMW">BMW</option>
+                  <option value="Honda">Honda</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterModel">Model</label>
+                <select id="filterModel">
+                  <option value="">Any model</option>
+                  <option value="Harrier">Harrier</option>
+                  <option value="CX-5">CX-5</option>
+                  <option value="Prado">Prado</option>
+                  <option value="X5">X5</option>
+                  <option value="C-Class">C-Class</option>
+                  <option value="Civic">Civic</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterCategory">Category</label>
+                <select id="filterCategory">
+                  <option value="">Any</option>
+                  <option value="SUV">SUV</option>
+                  <option value="Sedan">Sedan</option>
+                  <option value="Pickup">Pickup</option>
+                  <option value="Estate">Estate</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterFuel">Fuel</label>
+                <select id="filterFuel">
+                  <option value="">Any</option>
+                  <option value="Petrol">Petrol</option>
+                  <option value="Diesel">Diesel</option>
+                  <option value="Hybrid">Hybrid</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterTransmission">Transmission</label>
+                <select id="filterTransmission">
+                  <option value="">Any</option>
+                  <option value="Automatic">Automatic</option>
+                  <option value="Manual">Manual</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="filterLocation">Location</label>
+                <select id="filterLocation">
+                  <option value="">Any</option>
+                  <option value="Nairobi">Nairobi</option>
+                  <option value="Mombasa">Mombasa</option>
+                  <option value="Kisumu">Kisumu</option>
+                  <option value="Nakuru">Nakuru</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="inventory-grid" id="inventoryGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">About us</span>
+            <h2>Built around trust, quality, and customer care</h2>
+          </div>
+          <div class="about-grid">
+            <div class="info-box">
+              <p class="lead">
+                AutoHub Motors is a vehicle retail dealership focused on providing customers with a convenient and transparent way to purchase quality vehicles.
+              </p>
+              <ul class="info-list">
+                <li><span class="bullet"></span> Experienced team with over 15 years in car retail and trade-ins.</li>
+                <li><span class="bullet"></span> Mission: to simplify buying and ownership with honest service.</li>
+                <li><span class="bullet"></span> Vision: to be Kenya’s most trusted destination for vehicle discovery.</li>
+                <li><span class="bullet"></span> Values: transparency, reliability, and customer-first support.</li>
+              </ul>
+            </div>
+            <div class="info-box">
+              <h3>Why choose AutoHub?</h3>
+              <p>We help customers compare models, verify vehicle condition, and move quickly from inquiry to ownership.</p>
+              <div class="mini-stats">
+                <div class="mini-box">
+                  <strong>98%</strong>
+                  <span>Repeat clients</span>
+                </div>
+                <div class="mini-box">
+                  <strong>24/7</strong>
+                  <span>Sales support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="financing">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Financing</span>
+            <h2>Flexible payment solutions for your next vehicle</h2>
+          </div>
+
+          <div class="financing-wrap">
+            <div class="calc-panel">
+              <h3>Estimate your monthly repayment</h3>
+              <div class="calc-fields">
+                <div class="field">
+                  <label for="vehiclePrice">Vehicle price</label>
+                  <input id="vehiclePrice" type="number" value="4000000" />
+                </div>
+                <div class="field">
+                  <label for="depositAmount">Deposit</label>
+                  <input id="depositAmount" type="number" value="1000000" />
+                </div>
+                <div class="field">
+                  <label for="loanMonths">Repayment period</label>
+                  <select id="loanMonths">
+                    <option value="24">24 months</option>
+                    <option value="36">36 months</option>
+                    <option value="48" selected>48 months</option>
+                    <option value="60">60 months</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="interestRate">Interest rate</label>
+                  <input id="interestRate" type="number" value="12.5" step="0.1" />
+                </div>
+              </div>
+
+              <div style="margin-top: 18px;">
+                <button class="btn btn-primary" type="button" id="calculateFinance">Calculate</button>
+              </div>
+
+              <div class="result-box" id="financeResult">
+                <strong>Loan Amount:</strong> KSh 3,000,000<br />
+                <strong>Estimated monthly repayment:</strong> KSh 79,500
+              </div>
+            </div>
+
+            <div class="benefit-panel">
+              <h3>Available financing support</h3>
+              <ul class="info-list">
+                <li><span class="bullet"></span> Deposit options from as low as 20%.</li>
+                <li><span class="bullet"></span> Flexible repayment periods up to 60 months.</li>
+                <li><span class="bullet"></span> Assistance with partner banks and mobile lenders.</li>
+                <li><span class="bullet"></span> Documents required: ID, payslip, and proof of income.</li>
+                <li><span class="bullet"></span> Estimated figures are indicative only, subject to lender approval.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Contact us</span>
+            <h2>Talk to our sales team today</h2>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <h3>AutoHub Motors</h3>
+              <ul class="contact-list">
+                <li>
+                  <span class="contact-icon">📞</span>
+                  <div>
+                    <strong>Phone</strong><br />
+                    +254 700 000 123
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-icon">✉️</span>
+                  <div>
+                    <strong>Email</strong><br />
+                    sales@autohubmotors.co.ke
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-icon">📍</span>
+                  <div>
+                    <strong>Location</strong><br />
+                    Muthaiga, Nairobi, Kenya
+                  </div>
+                </li>
+                <li>
+                  <span class="contact-icon">🕒</span>
+                  <div>
+                    <strong>Opening hours</strong><br />
+                    Monday - Saturday: 8:00 AM - 6:00 PM
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact-form">
+              <form id="contactForm">
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" type="text" placeholder="Jane Doe" required />
+                  </div>
+                  <div class="field">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input id="phoneNumber" type="tel" placeholder="+254 7xx xxx xxx" required />
+                  </div>
+                  <div class="field">
+                    <label for="emailAddress">Email Address</label>
+                    <input id="emailAddress" type="email" placeholder="jane@example.com" required />
+                  </div>
+                  <div class="field">
+                    <label for="interestedVehicle">Vehicle interested in</label>
+                    <input id="interestedVehicle" type="text" placeholder="Toyota Harrier" />
+                  </div>
+                </div>
+                <div class="field" style="margin-top: 16px;">
+                  <label for="preferredContact">Preferred contact method</label>
+                  <select id="preferredContact">
+                    <option value="Phone">Phone</option>
+                    <option value="WhatsApp">WhatsApp</option>
+                    <option value="Email">Email</option>
+                  </select>
+                </div>
+                <div class="field" style="margin-top: 16px;">
+                  <label for="message">Message</label>
+                  <textarea id="message" placeholder="Tell us about the vehicle or financing need..." required></textarea>
+                </div>
+                <div style="margin-top: 18px;">
+                  <button class="btn btn-primary" type="submit">Send inquiry</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="admin">
+        <div class="container">
+          <div class="section-header">
+            <span class="kicker">Admin dashboard</span>
+            <h2>Dealer management overview</h2>
+          </div>
+
+          <div class="admin-shell">
+            <div class="admin-head">
+              <h3>AutoHub Motors — Dashboard</h3>
+            </div>
+
+            <div class="dashboard-grid">
+              <div class="dashboard-panel">
+                <h3>Quick stats</h3>
+                <div class="mini-stats">
+                  <div class="mini-box">
+                    <strong>82</strong>
+                    <span>Vehicles listed</span>
+                  </div>
+                  <div class="mini-box">
+                    <strong>24</strong>
+                    <span>Inquiries</span>
+                  </div>
+                  <div class="mini-box">
+                    <strong>9</strong>
+                    <span>Test drives</span>
+                  </div>
+                  <div class="mini-box">
+                    <strong>13</strong>
+                    <span>Sold this month</span>
+                  </div>
+                </div>
+
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>Vehicle</th>
+                        <th>Status</th>
+                        <th>Price</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Toyota Harrier</td>
+                        <td><span class="status-pill available">Available</span></td>
+                        <td>KSh 4,500,000</td>
+                      </tr>
+                      <tr>
+                        <td>BMW X5</td>
+                        <td><span class="status-pill reserved">Reserved</span></td>
+                        <td>KSh 10,800,000</td>
+                      </tr>
+                      <tr>
+                        <td>Toyota Prado</td>
+                        <td><span class="status-pill sold">Sold</span></td>
+                        <td>KSh 8,500,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="admin-form">
+                <h3>Add new vehicle</h3>
+                <form id="vehicleAdminForm">
+                  <div class="form-grid">
+                    <div class="field">
+                      <label for="adminMake">Make</label>
+                      <input id="adminMake" type="text" placeholder="Toyota" required />
+                    </div>
+                    <div class="field">
+                      <label for="adminModel">Model</label>
+                      <input id="adminModel" type="text" placeholder="Harrier" required />
+                    </div>
+                    <div class="field">
+                      <label for="adminYear">Year</label>
+                      <input id="adminYear" type="number" min="1990" max="2035" placeholder="2023" required />
+                    </div>
+                    <div class="field">
+                      <label for="adminPrice">Price</label>
+                      <input id="adminPrice" type="number" placeholder="4500000" required />
+                    </div>
+                    <div class="field">
+                      <label for="adminFuel">Fuel type</label>
+                      <select id="adminFuel">
+                        <option value="Petrol">Petrol</option>
+                        <option value="Diesel">Diesel</option>
+                        <option value="Hybrid">Hybrid</option>
+                      </select>
+                    </div>
+                    <div class="field">
+                      <label for="adminTransmission">Transmission</label>
+                      <select id="adminTransmission">
+                        <option value="Automatic">Automatic</option>
+                        <option value="Manual">Manual</option>
+                      </select>
+                    </div>
+                    <div class="field" style="grid-column: 1 / -1;">
+                      <label for="adminDescription">Description</label>
+                      <textarea id="adminDescription" placeholder="Vehicle summary and features..." required></textarea>
+                    </div>
+                  </div>
+                  <div style="margin-top: 18px;">
+                    <button class="btn btn-primary" type="submit">Publish vehicle</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© 2026 AutoHub Motors. All Rights Reserved.</div>
+        <div>Quality vehicles. Honest service. Modern experience.</div>
+      </div>
+    </footer>
+
+    <div class="modal" id="vehicleModal" aria-modal="true" role="dialog">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h3 id="modalTitle">Vehicle details</h3>
+          <button class="close-btn" type="button" id="closeModal" aria-label="Close vehicle details">×</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-gallery">
+            <img id="modalImage" src="" alt="Vehicle preview" />
+          </div>
+          <div class="modal-content">
+            <div class="car-meta">
+              <span class="car-make" id="modalMake">Toyota</span>
+              <span class="car-status status-available" id="modalStatus">Available</span>
+            </div>
+            <h3 id="modalName" class="car-title">Vehicle name</h3>
+            <div class="price" id="modalPrice">KSh 0</div>
+            <p id="modalDescription" class="lead">Vehicle description</p>
+            <div class="meta-columns">
+              <div class="meta-item"><span>Year</span><strong id="metaYear">-</strong></div>
+              <div class="meta-item"><span>Mileage</span><strong id="metaMileage">-</strong></div>
+              <div class="meta-item"><span>Fuel</span><strong id="metaFuel">-</strong></div>
+              <div class="meta-item"><span>Transmission</span><strong id="metaTransmission">-</strong></div>
+              <div class="meta-item"><span>Body type</span><strong id="metaBody">-</strong></div>
+              <div class="meta-item"><span>Colour</span><strong id="metaColor">-</strong></div>
+            </div>
+            <div class="modal-actions">
+              <button class="btn btn-primary" type="button">Contact Seller</button>
+              <button class="btn btn-secondary" type="button">Request Test Drive</button>
+              <button class="btn btn-ghost" type="button" style="color: var(--primary); border-color: var(--border); background: #f6f9fb;">Add to Favorites</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
